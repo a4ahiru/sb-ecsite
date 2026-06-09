@@ -55,10 +55,10 @@
         <div th:text="${product.productName}" class="product-detail-name"></div>
 
         <!--product（商品1件） から更に productPrice の値を取得 -->
-        <div th:text="${productPrice}" class="product-detail-price format-price"></div>
+        <div th:text="${product.productPrice}" class="product-detail-price format-price"></div>
         
         <!--product（商品1件） から更に productDescription の値を取得 -->
-        <div th:text="${productDescription}" class="product-detail-description"></div>
+        <div th:text="${product.productDescription}" class="product-detail-description"></div>
         
         <!-- (商品数量指定フォーム 開始) -->
         <!--値の送信先URLとして「http://localhost:8080/ecsite/order」を指定 -->
@@ -67,9 +67,10 @@
           <!-- (注文する商品の数量入力エリア 開始) -->
           <div class="count-input-container">
 			  
+			  
             <!-- (数量指定ラベル) -->
             <div class="count-label">
-              数量
+           
             </div>
             <!-- (注文する商品の数量入力欄 (初期値:1 最小:1 最大99)) -->
             <input type="number" name="orderCount" value="1" max="99" min="1" class="input-count" />
